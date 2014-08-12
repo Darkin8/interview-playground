@@ -20,7 +20,7 @@ app.get('/', function(req, res) {
 
 			var result = "";
 			if (rows != null && rows.length > 0) {
-				for (var i=0; i<rows.lenth; i++) {
+				for (var i=0; i<rows.length; i++) {
 					result += rows[i].name + " (" + rows[i].num_ideas + ")\n";
 				}
 			}
