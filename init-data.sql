@@ -4,17 +4,10 @@ use `main`;
 create table `human` (
 	human_id int auto_increment primary key,
 	name varchar(32),
-<<<<<<< HEAD
 	brain_id int not null unique) enigne InnoDB;
 
 create table `brains` (
-	brain_id int not null primary key,
-=======
-	brain_id int not null unique) engine InnoDB;
-
-create table `brains` (
 	brain_id int auto_increment primary key,
->>>>>>> 62a41da... Simple service #1
 	iq_level int,
 	foreign key (brain_id) references human(brain_id) on delete cascade) engine InnoDB;
 
@@ -23,8 +16,6 @@ create table `ideas` (
 	content text,
 	brain_id int not null,
 	foreign key (brain_id) references brains(brain_id) on delete cascade) engine InnoDB;
-<<<<<<< HEAD
-=======
 
 insert into `human`
 	(name, brain_id) values
@@ -55,4 +46,3 @@ insert into `ideas`
 	(4, "It's clearly a budget. It's got a lot of numbers in it."),
 	(4, "I have a different vision of leadership. A leadership is someone who brings people together."),
 	(4, "I just want you to know that, when we talk about war, we're really talking about peace.");
->>>>>>> 62a41da... Simple service #1
