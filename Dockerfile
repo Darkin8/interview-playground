@@ -12,5 +12,5 @@ RUN mkdir /home/darkin
 ADD . /home/darkin
 WORKDIR /home/darkin
 RUN npm install
-RUN /etc/init.d/mysql start; mysql -u root -p12345 < /home/darkin/init_data.sql
-RUN /etc/init.d/mysql start; nodejs app
+RUN /etc/init.d/mysql start; mysql -u root -p12345 < /home/darkin/init-data.sql
+ENTRYPOINT /etc/init.d/mysql start; nodejs app
