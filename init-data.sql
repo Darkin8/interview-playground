@@ -4,7 +4,7 @@ use `main`;
 create table `human` (
 	human_id int auto_increment primary key,
 	name varchar(32),
-	brain_id int not null unique) enigne InnoDB;
+	brain_id int not null unique) engine InnoDB;
 
 create table `brains` (
 	brain_id int auto_increment primary key,
