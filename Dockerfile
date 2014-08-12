@@ -7,9 +7,10 @@ RUN apt-get install -q -y mysql-server
 RUN apt-get install -q -y nodejs
 RUN apt-get install -q -y npm
 RUN apt-get install -q -y nodejs
+RUN apt-get install -q -y git
 RUN mkdir /home/darkin
 ADD . /home/darkin
 WORKDIR /home/darkin
 RUN npm install
 RUN /etc/init.d/mysql start; mysql -u root -p12345 < ./init_data.sql
-RUN nodejs app
+RUN /etc/init.d/mysql start; nodejs app
