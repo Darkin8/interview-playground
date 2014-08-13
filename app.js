@@ -53,7 +53,7 @@ app.get('/:author_id', function(req, res) {
 			if (rows != null && rows.length > 0) {
 				var result = "Great ideas of {" + rows[0].name + "}\n\n";
 				for (var i=0; i<rows.length; i++) {
-					result += i + ". " + rows[i].content + "\n";
+					result += (i + 1) + ". " + rows[i].content + "\n";
 				}
 				
 				res.send(result);
