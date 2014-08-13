@@ -5,6 +5,7 @@
 	"private": true,
 	"dependencies": {
 		"express": "4.x",
-		"node-mysql": "felixge/node-mysql"
+		"node-mysql": "felixge/node-mysql",
+		"validator": "chriso/validator.js"
 	}
 }
