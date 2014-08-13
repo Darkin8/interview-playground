@@ -21,7 +21,7 @@ app.get('/', function(req, res) {
 				throw err;
 			}
 
-			var result = "/	            - list of authors\n" +
+			var result = "/	      - list of authors\n" +
 				     "/[author_id]  - list of ideas\n\n";
 			if (rows != null && rows.length > 0) {
 				for (var i=0; i<rows.length; i++) {
